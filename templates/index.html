@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ditauz | Marketing & Software para Advocacia</title>
+    <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --preto-profundo: #050505;
+            --ouro-champagne: #D4AF37;
+            --ouro-escuro: #8B7220;
+            --ouro-claro: #E8D58A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--preto-profundo);
+            color: #FFFFFF;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--ouro-claro);
+        }
+
+        header {
+            padding: 4rem 5% 3rem 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--preto-profundo);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-container img {
+            max-height: 160px; /* Logo ainda maior e mais destacada */
+            width: auto;
+            display: block;
+            mix-blend-mode: screen; /* Anula o fundo preto da imagem fazendo-o fundir com o #050505 do site */
+            filter: brightness(1.1) contrast(1.1); /* Realça o tom dourado da marca */
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 5%;
+            background-color: var(--preto-profundo);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            max-width: 900px;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #CCCCCC;
+            max-width: 700px;
+            margin-bottom: 2.5rem;
+            font-weight: 300;
+        }
+
+        .cta-btn {
+            background-color: transparent;
+            color: var(--ouro-champagne);
+            border: 1px solid var(--ouro-champagne);
+            padding: 1rem 2.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--ouro-champagne);
+            color: var(--preto-profundo);
+        }
+
+        section.pillars {
+            padding: 6rem 10%;
+            background-color: var(--preto-profundo);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .pillar-card {
+            border-left: 2px solid var(--ouro-champagne);
+            padding-left: 1.5rem;
+        }
+
+        .pillar-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .pillar-card p {
+            color: #AAAAAA;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background-color: var(--preto-profundo);
+            color: var(--ouro-escuro);
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='Logo Ditauz.png') }}" alt="Ditauz - Marketing & Software para Advocacia">
+        </div>
+    </header>
+
+    <div class="hero">
+        <h1>A estrutura que os escritórios precisavam.</h1>
+        <p>Seu escritório cresce, mas a operação não acompanha. Implementamos o processo, a tecnologia e o marketing — para parar de apagar incêndio e começar a escalar.</p>
+        <button class="cta-btn" id="diagnosticoBtn">Solicitar Diagnóstico</button>
+    </div>
+
+    <section class="pillars">
+        <div class="pillar-card">
+            <h3>Marketing que converte.</h3>
+            <p>Posicionamento de autoridade com elegância. Sem promessas vazias ou linguagem de startup motivacional.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>Tecnologia que simplifica.</h3>
+            <p>Legal Operations aplicado para eliminar tarefas repetitivas e organizar o fluxo interno do seu escritório.</p>
+        </div>
+        <div class="pillar-card">
+            <h3>Operação que escala.</h3>
+            <p>Clareza operacional e previsibilidade para que o crescimento traga lucro, e não caos.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Ditauz. Autoridade com elegância. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('diagnosticoBtn').addEventListener('click', function() {
+            alert('Direcionando para o diagnóstico técnico da Ditauz.');
+        });
+    </script>
+</body>
+</html>
